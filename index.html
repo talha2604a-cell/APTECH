@@ -1,0 +1,789 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./src/output.css" rel="stylesheet">
+    <!-- <link href="./input.css" rel="stylesheet"> -->
+</head>
+<body>
+<!-- ========== HEADER ========== -->
+<header class="sticky mt-6 inset-x-0 before:absolute before:inset-0 before:max-w-5xl before:mx-2 lg:before:mx-auto before:rounded-4xl before:border before:border-navbar-line after:absolute after:inset-0 after:-z-1 after:max-w-5xl after:mx-2 lg:after:mx-auto after:rounded-4xl after:bg-navbar flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full">
+  <nav class="relative max-w-5xl w-full md:flex md:items-center md:justify-between md:gap-3 ps-5 pe-2 mx-2 lg:mx-auto py-2">
+    <!-- Logo w/ Collapse Button -->
+    <div class="flex items-center justify-between">
+      <a class="flex-none font-semibold text-xl text-foreground focus:outline-hidden focus:opacity-80" href="#" aria-label="Brand">Shopify</a>
+
+      <!-- Collapse Button -->
+      <div class="md:hidden">
+        <button type="button" class="hs-collapse-toggle relative size-9 flex justify-center items-center text-sm font-semibold rounded-full bg-layer border border-layer-line text-layer-foreground hover:bg-layer-hover focus:outline-hidden focus:bg-layer-focus disabled:opacity-50 disabled:pointer-events-none" id="hs-header-classic-collapse" aria-expanded="false" aria-controls="hs-header-classic" aria-label="Toggle navigation" data-hs-collapse="#hs-header-classic">
+          <svg class="hs-collapse-open:hidden size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
+          <svg class="hs-collapse-open:block shrink-0 hidden size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+      </div>
+      <!-- End Collapse Button -->
+    </div>
+    <!-- End Logo w/ Collapse Button -->
+
+    <!-- Collapse -->
+    <div id="hs-header-classic" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block" aria-labelledby="hs-header-classic-collapse" role="region">
+      <div class="overflow-hidden overflow-y-auto max-h-[75vh] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-none [&::-webkit-scrollbar-track]:bg-scrollbar-track [&::-webkit-scrollbar-thumb]:bg-scrollbar-thumb">
+        <div class="py-2 md:py-0 flex flex-col md:flex-row md:items-center md:justify-end gap-0.5 md:gap-1">
+          <a class="p-2 flex items-center text-sm text-primary focus:outline-hidden" href="#" aria-current="page">
+            <svg class="shrink-0 size-4 me-3 md:me-2 block md:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            Landing
+          </a>
+
+          <a class="p-2 flex items-center text-sm text-navbar-nav-foreground hover:text-muted-foreground-1 focus:outline-hidden focus:text-muted-foreground-1" href="#">
+            <svg class="shrink-0 size-4 me-3 md:me-2 block md:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Account
+          </a>
+
+          <a class="p-2 flex items-center text-sm text-navbar-nav-foreground hover:text-muted-foreground-1 focus:outline-hidden focus:text-muted-foreground-1" href="#">
+            <svg class="shrink-0 size-4 me-3 md:me-2 block md:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12h.01"/><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M22 13a18.15 18.15 0 0 1-20 0"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
+            Work
+          </a>
+
+          <a class="p-2 flex items-center text-sm text-navbar-nav-foreground hover:text-muted-foreground-1 focus:outline-hidden focus:text-muted-foreground-1" href="#">
+            <svg class="shrink-0 size-4 me-3 md:me-2 block md:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+            Blog
+          </a>
+
+          <!-- Dropdown -->
+          <div class="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] md:[--adaptive:adaptive] [--is-collapse:true] md:[--is-collapse:false] ">
+            <button id="hs-header-classic-dropdown" type="button" class="hs-dropdown-toggle w-full p-2 flex items-center text-sm text-navbar-nav-foreground hover:text-muted-foreground-1 focus:outline-hidden focus:text-muted-foreground-1" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+              <svg class="shrink-0 size-4 me-3 md:me-2 block md:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 2.5-2.5L3 5"/><path d="m3 19 2.5-2.5L3 14"/><path d="M10 6h11"/><path d="M10 12h11"/><path d="M10 18h11"/></svg>
+              Dropdown
+              <svg class="hs-dropdown-open:-rotate-180 md:hs-dropdown-open:rotate-0 duration-300 shrink-0 size-4 ms-auto md:ms-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+
+            <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-150 hs-dropdown-open:opacity-100 opacity-0 relative w-full md:w-52 hidden z-10 top-full ps-7 md:ps-0 md:bg-dropdown md:border md:border-dropdown-line md:rounded-lg md:shadow-md before:absolute before:-top-4 before:inset-s-0 before:w-full before:h-5 md:after:hidden after:absolute after:top-1 after:inset-s-4.5 after:h-[calc(100%-4px)] after:border-s after:border-navbar-nav-list-divider" role="menu" aria-orientation="vertical" aria-labelledby="hs-header-classic-dropdown">
+              <div class="py-1 md:px-1 space-y-0.5">
+                <a class="py-1.5 px-2 flex items-center text-sm text-navbar-nav-foreground hover:text-muted-foreground-1 focus:outline-hidden focus:text-muted-foreground-1" href="#">
+                  About
+                </a>
+
+                <div class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] [--is-collapse:true] md:[--is-collapse:false] relative">
+                  <button id="hs-header-classic-dropdown-sub" type="button" class="hs-dropdown-toggle w-full py-1.5 px-2 flex items-center text-sm text-navbar-nav-foreground hover:text-muted-foreground-1 focus:outline-hidden focus:text-muted-foreground-1">
+                    Sub Menu
+                    <svg class="hs-dropdown-open:-rotate-180 md:hs-dropdown-open:-rotate-90 md:-rotate-90 ms-auto shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                  </button>
+
+                  <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-150 hs-dropdown-open:opacity-100 opacity-0 relative md:w-48 hidden z-10 md:mt-2 md:mx-2.5! md:top-0 md:inset-e-full ps-7 md:ps-0 md:bg-dropdown md:border md:border-dropdown-line md:rounded-lg md:shadow-md before:hidden md:before:block before:absolute before:-inset-e-5 before:top-0 before:h-full before:w-5 md:after:hidden after:absolute after:top-1 after:inset-s-4.5 after:h-[calc(100%-4px)] after:border-s after:border-navbar-nav-list-divider" role="menu" aria-orientation="vertical" aria-labelledby="hs-header-classic-dropdown-sub">
+                    <div class="p-1 space-y-0.5 md:space-y-1">
+                      <a class="py-1.5 px-2 flex items-center text-sm text-navbar-nav-foreground hover:text-muted-foreground-1 focus:outline-hidden focus:text-muted-foreground-1" href="#">
+                        About
+                      </a>
+
+                      <a class="py-1.5 px-2 flex items-center text-sm text-navbar-nav-foreground hover:text-muted-foreground-1 focus:outline-hidden focus:text-muted-foreground-1" href="#">
+                        Downloads
+                      </a>
+
+                      <a class="py-1.5 px-2 flex items-center text-sm text-navbar-nav-foreground hover:text-muted-foreground-1 focus:outline-hidden focus:text-muted-foreground-1" href="#">
+                        Team Account
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <a class="py-1.5 px-2 flex items-center text-sm text-navbar-nav-foreground hover:text-muted-foreground-1 focus:outline-hidden focus:text-muted-foreground-1" href="#">
+                  Downloads
+                </a>
+
+                <a class="py-1.5 px-2 flex items-center text-sm text-navbar-nav-foreground hover:text-muted-foreground-1 focus:outline-hidden focus:text-muted-foreground-1" href="#">
+                  Team Account
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- End Dropdown -->
+
+          <!-- Button Group -->
+          <div class="relative flex flex-wrap items-center gap-x-1.5 md:ps-2.5  md:ms-1.5 before:block before:absolute before:top-1/2 before:-inset-s-px before:w-px before:h-4 before:bg-navbar-divider before:-translate-y-1/2">
+            <a class="p-2 w-full flex items-center text-sm text-navbar-nav-foreground hover:text-muted-foreground-1 focus:outline-hidden focus:text-muted-foreground-1" href="#">
+              <svg class="shrink-0 size-4 me-3 md:me-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              Log in
+            </a>
+          </div>
+          <!-- End Button Group -->
+        </div>
+      </div>
+    </div>
+    <!-- End Collapse -->
+  </nav>
+</header>
+<!-- ========== END HEADER ========== -->
+ <!-- Slider -->
+<div class="px-4 sm:px-6 lg:px-8 py-10">
+  <div data-hs-carousel='{
+      "loadingClasses": "opacity-0"
+    }' class="relative">
+    <div class="hs-carousel relative overflow-hidden w-full h-120 md:h-[calc(100vh-106px)]  bg-surface rounded-2xl">
+      <div class="hs-carousel-body absolute top-0 bottom-0 inset-s-0 flex flex-nowrap transition-transform duration-700 opacity-0">
+        <!-- Item -->
+        <div class="hs-carousel-slide">
+          <div class="h-120 md:h-[calc(100vh-106px)]  flex flex-col bg-[url('https://images.unsplash.com/photo-1615615228002-890bb61cac6e?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center bg-no-repeat">
+            <div class="mt-auto w-2/3 md:max-w-lg ps-5 pb-5 md:ps-10 md:pb-10">
+              <span class="block text-foreground-inverse">Nike React</span>
+              <span class="block text-foreground-inverse text-xl md:text-3xl">Rewriting sport's playbook for billions of athletes</span>
+              <div class="mt-5">
+                <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-plain text-inverse hover:bg-muted-hover focus:outline-hidden focus:bg-muted-focus disabled:opacity-50 disabled:pointer-events-none" href="#">
+                  Read Case Studies
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <div class="hs-carousel-slide">
+          <div class="h-120 md:h-[calc(100vh-106px)]  flex flex-col bg-[url('https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center bg-no-repeat">
+            <div class="mt-auto w-2/3 md:max-w-lg ps-5 pb-5 md:ps-10 md:pb-10">
+              <span class="block text-foreground-inverse">CoolApps</span>
+              <span class="block text-foreground-inverse text-xl md:text-3xl">From mobile apps to gaming consoles</span>
+              <div class="mt-5">
+                <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-plain text-inverse hover:bg-muted-hover focus:outline-hidden focus:bg-muted-focus disabled:opacity-50 disabled:pointer-events-none" href="#">
+                  Read Case Studies
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <div class="hs-carousel-slide">
+          <div class="h-120 md:h-[calc(100vh-106px)]  flex flex-col bg-[url('https://images.unsplash.com/photo-1629666451094-8908989cae90?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center bg-no-repeat">
+            <div class="mt-auto w-2/3 md:max-w-lg ps-5 pb-5 md:ps-10 md:pb-10">
+              <span class="block text-foreground-inverse">Grumpy</span>
+              <span class="block text-foreground-inverse text-xl md:text-3xl">Bringing Art to everything</span>
+              <div class="mt-5">
+                <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-plain text-inverse hover:bg-muted-hover focus:outline-hidden focus:bg-muted-focus disabled:opacity-50 disabled:pointer-events-none" href="#">
+                  Read Case Studies
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Item -->
+      </div>
+    </div>
+
+    <!-- Arrows -->
+    <button type="button" class="hs-carousel-prev hs-carousel-disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 inset-s-0 inline-flex justify-center items-center w-12 h-full text-inverse hover:bg-plain/20 rounded-s-2xl focus:outline-hidden focus:bg-plain/20">
+      <span class="text-2xl" aria-hidden="true">
+        <svg class="shrink-0 size-3.5 md:size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
+        </svg>
+      </span>
+      <span class="sr-only">Previous</span>
+    </button>
+
+    <button type="button" class="hs-carousel-next hs-carousel-disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 inset-e-0 inline-flex justify-center items-center w-12 h-full text-inverse hover:bg-plain/20 rounded-e-2xl focus:outline-hidden focus:bg-plain/20">
+      <span class="sr-only">Next</span>
+      <span class="text-2xl" aria-hidden="true">
+        <svg class="shrink-0 size-3.5 md:size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+        </svg>
+      </span>
+    </button>
+    <!-- End Arrows -->
+  </div>
+</div>
+<!-- End Slider -->
+
+<div class="grid grid-cols-3 gap-4 mx-4">
+   
+        <!-- Card -->
+<div class="flex flex-col bg-card border border-card-line shadow-2xs rounded-xl">
+  <img class="w-full h-auto rounded-t-xl" src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80" alt="Card Image">
+  <div class="p-4  ">
+    <h3 class="font-semibold text-foreground">
+      Card title
+    </h3>
+    <p class="mt-1 text-muted-foreground-1">
+      Some quick example text to build on the card title and make up the bulk of the card's content.
+    </p>
+    <a class="mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg bg-primary border border-primary-line text-primary-foreground hover:bg-primary-hover focus:outline-hidden focus:bg-primary-focus disabled:opacity-50 disabled:pointer-events-none" href="#">
+      Go somewhere
+    </a>
+  </div>
+</div>
+<!-- End Card -->
+   <!-- Card -->
+<div class="flex flex-col bg-card border border-card-line shadow-2xs rounded-xl">
+  <img class="w-full h-auto rounded-t-xl" src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80" alt="Card Image">
+  <div class="p-4  ">
+    <h3 class="font-semibold text-foreground">
+      Card title
+    </h3>
+    <p class="mt-1 text-muted-foreground-1">
+      Some quick example text to build on the card title and make up the bulk of the card's content.
+    </p>
+    <a class="mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg bg-primary border border-primary-line text-primary-foreground hover:bg-primary-hover focus:outline-hidden focus:bg-primary-focus disabled:opacity-50 disabled:pointer-events-none" href="#">
+      Go somewhere
+    </a>
+  </div>
+</div>
+<!-- End Card -->
+   <!-- Card -->
+<div class="flex flex-col bg-card border border-card-line shadow-2xs rounded-xl">
+  <img class="w-full h-auto rounded-t-xl" src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80" alt="Card Image">
+  <div class="p-4  ">
+    <h3 class="font-semibold text-foreground">
+      Card title
+    </h3>
+    <p class="mt-1 text-muted-foreground-1">
+      Some quick example text to build on the card title and make up the bulk of the card's content.
+    </p>
+    <a class="mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg bg-primary border border-primary-line text-primary-foreground hover:bg-primary-hover focus:outline-hidden focus:bg-primary-focus disabled:opacity-50 disabled:pointer-events-none" href="#">
+      Go somewhere
+    </a>
+  </div>
+</div>
+<!-- End Card -->
+</div>
+<div class="grid grid-cols-3 gap-4 mx-4 mt-4">
+   
+        <!-- Card -->
+<div class="flex flex-col bg-card border border-card-line shadow-2xs rounded-xl">
+  <img class="w-full h-auto rounded-t-xl" src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80" alt="Card Image">
+  <div class="p-4  ">
+    <h3 class="font-semibold text-foreground">
+      Card title
+    </h3>
+    <p class="mt-1 text-muted-foreground-1">
+      Some quick example text to build on the card title and make up the bulk of the card's content.
+    </p>
+    <a class="mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg bg-primary border border-primary-line text-primary-foreground hover:bg-primary-hover focus:outline-hidden focus:bg-primary-focus disabled:opacity-50 disabled:pointer-events-none" href="#">
+      Go somewhere
+    </a>
+  </div>
+</div>
+<!-- End Card -->
+   <!-- Card -->
+<div class="flex flex-col bg-card border border-card-line shadow-2xs rounded-xl">
+  <img class="w-full h-auto rounded-t-xl" src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80" alt="Card Image">
+  <div class="p-4  ">
+    <h3 class="font-semibold text-foreground">
+      Card title
+    </h3>
+    <p class="mt-1 text-muted-foreground-1">
+      Some quick example text to build on the card title and make up the bulk of the card's content.
+    </p>
+    <a class="mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg bg-primary border border-primary-line text-primary-foreground hover:bg-primary-hover focus:outline-hidden focus:bg-primary-focus disabled:opacity-50 disabled:pointer-events-none" href="#">
+      Go somewhere
+    </a>
+  </div>
+</div>
+<!-- End Card -->
+   <!-- Card -->
+<div class="flex flex-col bg-card border border-card-line shadow-2xs rounded-xl">
+  <img class="w-full h-auto rounded-t-xl" src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80" alt="Card Image">
+  <div class="p-4  ">
+    <h3 class="font-semibold text-foreground">
+      Card title
+    </h3>
+    <p class="mt-1 text-muted-foreground-1">
+      Some quick example text to build on the card title and make up the bulk of the card's content.
+    </p>
+    <a class="mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg bg-primary border border-primary-line text-primary-foreground hover:bg-primary-hover focus:outline-hidden focus:bg-primary-focus disabled:opacity-50 disabled:pointer-events-none" href="#">
+      Go somewhere
+    </a>
+  </div>
+</div>
+<!-- End Card -->
+</div>
+<!-- Icon Blocks -->
+<div class="max-w-340 px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 items-center gap-12">
+    <!-- Icon Block -->
+    <div>
+      <div class="relative flex justify-center items-center size-12 bg-layer rounded-xl before:absolute before:-inset-px before:-z-1 before:bg-linear-to-br before:from-chart-primary before:via-transparent before:to-chart-5 before:rounded-xl">
+        <svg class="shrink-0 size-6 text-primary" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="10" height="14" x="3" y="8" rx="2"/><path d="M5 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2h-2.4"/><path d="M8 18h.01"/></svg>
+      </div>
+      <div class="mt-5">
+        <h3 class="text-lg font-semibold text-foreground">Responsive</h3>
+        <p class="mt-1 text-muted-foreground-2">Responsive, and mobile-first project on the web</p>
+      </div>
+    </div>
+    <!-- End Icon Block -->
+
+    <!-- Icon Block -->
+    <div>
+      <div class="relative flex justify-center items-center size-12 bg-layer rounded-xl before:absolute before:-inset-px before:-z-1 before:bg-linear-to-br before:from-chart-primary before:via-transparent before:to-chart-5 before:rounded-xl">
+        <svg class="shrink-0 size-6 text-primary" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>
+      </div>
+      <div class="mt-5">
+        <h3 class="text-lg font-semibold text-foreground">Customizable</h3>
+        <p class="mt-1 text-muted-foreground-2">Components are easily customized and extendable</p>
+      </div>
+    </div>
+    <!-- End Icon Block -->
+
+    <!-- Icon Block -->
+    <div>
+      <div class="relative flex justify-center items-center size-12 bg-layer rounded-xl before:absolute before:-inset-px before:-z-1 before:bg-linear-to-br before:from-chart-primary before:via-transparent before:to-chart-5 before:rounded-xl">
+        <svg class="shrink-0 size-6 text-primary" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+      </div>
+      <div class="mt-5">
+        <h3 class="text-lg font-semibold text-foreground">Documentation</h3>
+        <p class="mt-1 text-muted-foreground-2">Every component and plugin is well documented</p>
+      </div>
+    </div>
+    <!-- End Icon Block -->
+
+    <!-- Icon Block -->
+    <div>
+      <div class="relative flex justify-center items-center size-12 bg-layer rounded-xl before:absolute before:-inset-px before:-z-1 before:bg-linear-to-br before:from-chart-primary before:via-transparent before:to-chart-5 before:rounded-xl">
+        <svg class="shrink-0 size-6 text-primary" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg>
+      </div>
+      <div class="mt-5">
+        <h3 class="text-lg font-semibold text-foreground">24/7 Support</h3>
+        <p class="mt-1 text-muted-foreground-2">Contact us 24 hours a day, 7 days a week</p>
+      </div>
+    </div>
+    <!-- End Icon Block -->
+  </div>
+</div>
+<!-- End Icon Blocks -->
+
+<!-- FAQ -->
+<div class="max-w-340 px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+  <!-- Title -->
+  <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+    <h2 class="text-2xl font-bold md:text-4xl md:leading-tight text-foreground">Your questions, answered</h2>
+    <p class="mt-1 text-muted-foreground-2">Answers to the most frequently asked questions.</p>
+  </div>
+  <!-- End Title -->
+
+  <div class="max-w-2xl mx-auto">
+    <!-- Accordion -->
+    <div class="hs-accordion-group">
+      <div class="hs-accordion hs-accordion-active:bg-muted-active rounded-xl p-6 active" id="hs-basic-with-title-and-arrow-stretched-heading-one">
+        <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-foreground rounded-lg transition hover:text-muted-foreground-1 focus:outline-hidden" aria-expanded="true" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-one">
+          Can I cancel at anytime?
+          <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-muted-foreground-2 group-hover:text-muted-foreground-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-muted-foreground-2 group-hover:text-muted-foreground-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+        </button>
+        <div id="hs-basic-with-title-and-arrow-stretched-collapse-one" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-one">
+          <p class="text-foreground">
+            Yes, you can cancel anytime no questions are asked while you cancel but we would highly appreciate if you will give us some feedback.
+          </p>
+        </div>
+      </div>
+
+      <div class="hs-accordion hs-accordion-active:bg-muted-active rounded-xl p-6" id="hs-basic-with-title-and-arrow-stretched-heading-two">
+        <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-foreground rounded-lg transition hover:text-muted-foreground-1 focus:outline-hidden" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
+          My team has credits. How do we use them?
+          <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-muted-foreground-2 group-hover:text-muted-foreground-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-muted-foreground-2 group-hover:text-muted-foreground-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+        </button>
+        <div id="hs-basic-with-title-and-arrow-stretched-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-two">
+          <p class="text-foreground">
+            Once your team signs up for a subscription plan. This is where we sit down, grab a cup of coffee and dial in the details.
+          </p>
+        </div>
+      </div>
+
+      <div class="hs-accordion hs-accordion-active:bg-muted-active rounded-xl p-6" id="hs-basic-with-title-and-arrow-stretched-heading-three">
+        <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-foreground rounded-lg transition hover:text-muted-foreground-1 focus:outline-hidden" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-three">
+          How does Preline's pricing work?
+          <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-muted-foreground-2 group-hover:text-muted-foreground-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-muted-foreground-2 group-hover:text-muted-foreground-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+        </button>
+        <div id="hs-basic-with-title-and-arrow-stretched-collapse-three" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-three">
+          <p class="text-foreground">
+            Our subscriptions are tiered. Understanding the task at hand and ironing out the wrinkles is key.
+          </p>
+        </div>
+      </div>
+
+      <div class="hs-accordion hs-accordion-active:bg-muted-active rounded-xl p-6" id="hs-basic-with-title-and-arrow-stretched-heading-four">
+        <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-foreground rounded-lg transition hover:text-muted-foreground-1 focus:outline-hidden" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-four">
+          How secure is Preline?
+          <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-muted-foreground-2 group-hover:text-muted-foreground-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-muted-foreground-2 group-hover:text-muted-foreground-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+        </button>
+        <div id="hs-basic-with-title-and-arrow-stretched-collapse-four" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-four">
+          <p class="text-foreground">
+            Protecting the data you trust to Preline is our first priority. This part is really crucial in keeping the project in line to completion.
+          </p>
+        </div>
+      </div>
+
+      <div class="hs-accordion hs-accordion-active:bg-muted-active rounded-xl p-6" id="hs-basic-with-title-and-arrow-stretched-heading-five">
+        <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-foreground rounded-lg transition hover:text-muted-foreground-1 focus:outline-hidden" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-five">
+          How do I get access to a theme I purchased?
+          <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-muted-foreground-2 group-hover:text-muted-foreground-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-muted-foreground-2 group-hover:text-muted-foreground-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+        </button>
+        <div id="hs-basic-with-title-and-arrow-stretched-collapse-five" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-five">
+          <p class="text-foreground">
+            If you lose the link for a theme you purchased, don't panic! We've got you covered. You can login to your account, tap your avatar in the upper right corner, and tap Purchases. If you didn't create a login or can't remember the information, you can use our handy Redownload page, just remember to use the same email you originally made your purchases with.
+          </p>
+        </div>
+      </div>
+
+      <div class="hs-accordion hs-accordion-active:bg-muted-active rounded-xl p-6" id="hs-basic-with-title-and-arrow-stretched-heading-six">
+        <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-foreground rounded-lg transition hover:text-muted-foreground-1 focus:outline-hidden" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-six">
+          Upgrade License Type
+          <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-muted-foreground-2 group-hover:text-muted-foreground-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-muted-foreground-2 group-hover:text-muted-foreground-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+        </button>
+        <div id="hs-basic-with-title-and-arrow-stretched-collapse-six" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-six">
+          <p class="text-foreground">
+            There may be times when you need to upgrade your license from the original type you purchased and we have a solution that ensures you can apply your original purchase cost to the new license purchase.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- End Accordion -->
+  </div>
+</div>
+<!-- End FAQ -->
+ <!-- Image Grid -->
+<div class=" mx-4 grid grid-cols-2 sm:grid-cols-3 gap-2">
+  <a class="group block relative overflow-hidden rounded-lg" href="#">
+    <img class="w-full size-40 object-cover rounded-lg" src="https://images.unsplash.com/photo-1656618724305-a4257e46e847?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project">
+    <div class="absolute bottom-1 inset-e-1 opacity-0 group-hover:opacity-100 transition">
+      <div class="flex items-center gap-x-1 py-1 px-2 bg-layer border border-layer-line text-layer-foreground rounded-lg">
+        <svg class="shrink-0 size-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <span class="text-xs">View</span>
+      </div>
+    </div>
+  </a>
+
+  <a class="group block relative overflow-hidden rounded-lg" href="#">
+    <img class="w-full size-40 object-cover rounded-lg" src="https://images.unsplash.com/photo-1616427592793-67b858804534?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project">
+    <div class="absolute bottom-1 inset-e-1 opacity-0 group-hover:opacity-100 transition">
+      <div class="flex items-center gap-x-1 py-1 px-2 bg-layer border border-layer-line text-layer-foreground rounded-lg">
+        <svg class="shrink-0 size-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <span class="text-xs">View</span>
+      </div>
+    </div>
+  </a>
+
+  <a class="group block relative overflow-hidden rounded-lg" href="#">
+    <img class="w-full size-40 object-cover rounded-lg" src="https://images.unsplash.com/photo-1516131206008-dd041a9764fd?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project">
+    <div class="absolute bottom-1 inset-e-1 opacity-0 group-hover:opacity-100 transition">
+      <div class="flex items-center gap-x-1 py-1 px-2 bg-layer border border-layer-line text-layer-foreground rounded-lg">
+        <svg class="shrink-0 size-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <span class="text-xs">View</span>
+      </div>
+    </div>
+  </a>
+
+  <a class="group block relative overflow-hidden rounded-lg" href="#">
+    <img class="w-full size-40 object-cover rounded-lg" src="https://images.unsplash.com/photo-1707760696486-2a2cd7e0b6a6?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project">
+    <div class="absolute bottom-1 inset-e-1 opacity-0 group-hover:opacity-100 transition">
+      <div class="flex items-center gap-x-1 py-1 px-2 bg-layer border border-layer-line text-layer-foreground rounded-lg">
+        <svg class="shrink-0 size-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <span class="text-xs">View</span>
+      </div>
+    </div>
+  </a>
+
+  <a class="group block relative overflow-hidden rounded-lg" href="#">
+    <img class="w-full size-40 object-cover rounded-lg" src="https://images.unsplash.com/photo-1585159812596-fac104f2f069?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project">
+    <div class="absolute bottom-1 inset-e-1 opacity-0 group-hover:opacity-100 transition">
+      <div class="flex items-center gap-x-1 py-1 px-2 bg-layer border border-layer-line text-layer-foreground rounded-lg">
+        <svg class="shrink-0 size-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <span class="text-xs">View</span>
+      </div>
+    </div>
+  </a>
+
+  <a class="group block relative overflow-hidden rounded-lg" href="#">
+    <img class="w-full size-40 object-cover rounded-lg" src="https://images.unsplash.com/photo-1654131300276-db70adf4f85d?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project">
+    <div class="absolute bottom-1 inset-e-1 opacity-0 group-hover:opacity-100 transition">
+      <div class="flex items-center gap-x-1 py-1 px-2 bg-layer border border-layer-line text-layer-foreground rounded-lg">
+        <svg class="shrink-0 size-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <span class="text-xs">View</span>
+      </div>
+    </div>
+  </a>
+</div>
+<!-- End Image Grid -->
+ <!-- Contact -->
+<div id="contact" class="bg-background">
+  <div class="max-w-5xl px-4 xl:px-0 py-10 lg:py-20 mx-auto">
+    <!-- Title -->
+    <div class="max-w-3xl mb-10 lg:mb-14">
+      <h2 class="text-foreground font-semibold text-2xl md:text-4xl md:leading-tight">Contact us</h2>
+      <p class="mt-1 text-muted-foreground-1">Whatever your goal - we will get you there.</p>
+    </div>
+    <!-- End Title -->
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 lg:gap-x-16">
+      <div class="md:order-2 border-b border-line-1 pb-10 mb-10 md:border-b-0 md:pb-0 md:mb-0">
+        <form>
+          <div class="space-y-4">
+            <!-- Input -->
+            <div class="relative">
+              <input type="text" id="hs-tac-input-name" class="peer p-3 sm:p-4 block w-full bg-surface border-transparent rounded-lg sm:text-sm text-foreground placeholder:text-transparent focus:outline-hidden focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
+              focus:pt-6
+              focus:pb-2
+              not-placeholder-shown:pt-6
+              not-placeholder-shown:pb-2
+              autofill:pt-6
+              autofill:pb-2" placeholder="Name">
+              <label for="hs-tac-input-name" class="absolute top-0 inset-s-0 p-3 sm:p-4 h-full text-muted-foreground-1 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                peer-focus:text-xs
+                peer-focus:-translate-y-1.5
+                peer-focus:text-muted-foreground-1
+                peer-not-placeholder-shown:text-xs
+                peer-not-placeholder-shown:-translate-y-1.5
+                peer-not-placeholder-shown:text-muted-foreground-1">Name</label>
+            </div>
+            <!-- End Input -->
+
+            <!-- Input -->
+            <div class="relative">
+              <input type="email" id="hs-tac-input-email" class="peer p-3 sm:p-4 block w-full bg-surface border-transparent rounded-lg sm:text-sm text-foreground placeholder:text-transparent focus:outline-hidden focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
+              focus:pt-6
+              focus:pb-2
+              not-placeholder-shown:pt-6
+              not-placeholder-shown:pb-2
+              autofill:pt-6
+              autofill:pb-2" placeholder="Email">
+              <label for="hs-tac-input-email" class="absolute top-0 inset-s-0 p-3 sm:p-4 h-full text-muted-foreground-1 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                peer-focus:text-xs
+                peer-focus:-translate-y-1.5
+                peer-focus:text-muted-foreground-1
+                peer-not-placeholder-shown:text-xs
+                peer-not-placeholder-shown:-translate-y-1.5
+                peer-not-placeholder-shown:text-muted-foreground-1">Email</label>
+            </div>
+            <!-- End Input -->
+
+            <!-- Input -->
+            <div class="relative">
+              <input type="text" id="hs-tac-input-company" class="peer p-3 sm:p-4 block w-full bg-surface border-transparent rounded-lg sm:text-sm text-foreground placeholder:text-transparent focus:outline-hidden focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
+              focus:pt-6
+              focus:pb-2
+              not-placeholder-shown:pt-6
+              not-placeholder-shown:pb-2
+              autofill:pt-6
+              autofill:pb-2" placeholder="Company">
+              <label for="hs-tac-input-company" class="absolute top-0 inset-s-0 p-3 sm:p-4 h-full text-muted-foreground-1 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                peer-focus:text-xs
+                peer-focus:-translate-y-1.5
+                peer-focus:text-muted-foreground-1
+                peer-not-placeholder-shown:text-xs
+                peer-not-placeholder-shown:-translate-y-1.5
+                peer-not-placeholder-shown:text-muted-foreground-1">Company</label>
+            </div>
+            <!-- End Input -->
+
+            <!-- Input -->
+            <div class="relative">
+              <input type="text" id="hs-tac-input-phone" class="peer p-3 sm:p-4 block w-full bg-surface border-transparent rounded-lg sm:text-sm text-foreground placeholder:text-transparent focus:outline-hidden focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
+              focus:pt-6
+              focus:pb-2
+              not-placeholder-shown:pt-6
+              not-placeholder-shown:pb-2
+              autofill:pt-6
+              autofill:pb-2" placeholder="Phone">
+              <label for="hs-tac-input-phone" class="absolute top-0 inset-s-0 p-3 sm:p-4 h-full text-muted-foreground-1 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                peer-focus:text-xs
+                peer-focus:-translate-y-1.5
+                peer-focus:text-muted-foreground-1
+                peer-not-placeholder-shown:text-xs
+                peer-not-placeholder-shown:-translate-y-1.5
+                peer-not-placeholder-shown:text-muted-foreground-1">Phone</label>
+            </div>
+            <!-- End Input -->
+
+            <!-- Textarea -->
+            <div class="relative">
+              <textarea id="hs-tac-message" class="peer p-3 sm:p-4 block w-full bg-surface border-transparent rounded-lg sm:text-sm text-foreground placeholder:text-transparent focus:outline-hidden focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
+              focus:pt-6
+              focus:pb-2
+              not-placeholder-shown:pt-6
+              not-placeholder-shown:pb-2
+              autofill:pt-6
+              autofill:pb-2" placeholder="This is a textarea placeholder" data-hs-textarea-auto-height></textarea>
+              <label for="hs-tac-message" class="absolute top-0 inset-s-0 p-3 sm:p-4 h-full text-muted-foreground-1 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                peer-focus:text-xs
+                peer-focus:-translate-y-1.5
+                peer-focus:text-muted-foreground-1
+                peer-not-placeholder-shown:text-xs
+                peer-not-placeholder-shown:-translate-y-1.5
+                peer-not-placeholder-shown:text-muted-foreground-1">Tell us about your project</label>
+            </div>
+            <!-- End Textarea -->
+          </div>
+
+          <div class="mt-2">
+            <p class="text-xs text-muted-foreground-1">
+              All fields are required
+            </p>
+
+            <p class="mt-5">
+              <a class="group inline-flex items-center gap-x-2 py-2 px-3 bg-primary border border-primary-line text-primary-foreground font-medium text-sm rounded-full focus:outline-hidden" href="#">
+                Submit
+                <svg class="shrink-0 size-4 transition group-hover:translate-x-0.5 group-focus:translate-x-0.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </p>
+          </div>
+        </form>
+      </div>
+      <!-- End Col -->
+
+      <div class="space-y-14">
+        <!-- Item -->
+        <div class="flex gap-x-5">
+          <svg class="shrink-0 size-6 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div class="grow">
+            <p class="text-foreground font-semibold">Our address:</p>
+
+            <address class="mt-1 text-muted-foreground-1 text-sm not-italic">
+              300 Bath Street, Tay House<br>
+              Glasgow G2 4JR, United Kingdom
+            </address>
+          </div>
+        </div>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <div class="flex gap-x-5">
+          <svg class="shrink-0 size-6 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.2 8.4c.5.38.8.97.8 1.6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10a2 2 0 0 1 .8-1.6l8-6a2 2 0 0 1 2.4 0l8 6Z"/><path d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10"/></svg>
+          <div class="grow">
+            <p class="text-foreground font-semibold">Email us:</p>
+
+            <a class="mt-1 text-muted-foreground-1 text-sm hover:text-foreground focus:outline-hidden focus:text-foreground" href="#mailto:example@site.co" target="_blank">
+              hello@example.so
+            </a>
+          </div>
+        </div>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <div class="flex gap-x-5">
+          <svg class="shrink-0 size-6 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
+          <div class="grow">
+            <p class="text-foreground font-semibold">We're hiring</p>
+            <p class="mt-1 text-muted-foreground-1">We're thrilled to announce that we're expanding our team and looking for talented individuals like you to join us.</p>
+            <p class="mt-2">
+              <a class="group inline-flex items-center gap-x-2 font-medium text-sm text-primary decoration-2 hover:underline focus:outline-hidden focus:underline" href="#">
+                Job openings
+                <svg class="shrink-0 size-4 transition group-hover:translate-x-0.5 group-focus:translate-x-0.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </p>
+          </div>
+        </div>
+        <!-- End Item -->
+      </div>
+      <!-- End Col -->
+    </div>
+    <!-- End Grid -->
+  </div>
+</div>
+<!-- End Contact -->
+ <!-- ========== FOOTER ========== -->
+<footer class="mt-auto bg-inverse w-full">
+  <div class="mt-auto w-full max-w-340 py-10 px-4 sm:px-6 lg:px-8 lg:pt-20 mx-auto">
+    <!-- Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+      <div class="col-span-full lg:col-span-1">
+        <a class="flex-none text-xl font-semibold text-foreground-inverse focus:outline-hidden focus:opacity-80" href="#" aria-label="Brand">Shopify</a>
+      </div>
+      <!-- End Col -->
+
+      <div class="col-span-1">
+        <h4 class="font-semibold text-foreground-inverse">Product</h4>
+
+        <div class="mt-3 grid space-y-3">
+          <p><a class="inline-flex gap-x-2 text-foreground-inverse/70 hover:text-foreground-inverse focus:outline-hidden focus:text-foreground-inverse" href="#">Pricing</a></p>
+          <p><a class="inline-flex gap-x-2 text-foreground-inverse/70 hover:text-foreground-inverse focus:outline-hidden focus:text-foreground-inverse" href="#">Changelog</a></p>
+          <p><a class="inline-flex gap-x-2 text-foreground-inverse/70 hover:text-foreground-inverse focus:outline-hidden focus:text-foreground-inverse" href="#">Docs</a></p>
+        </div>
+      </div>
+      <!-- End Col -->
+
+      <div class="col-span-1">
+        <h4 class="font-semibold text-foreground-inverse">Company</h4>
+
+        <div class="mt-3 grid space-y-3">
+          <p><a class="inline-flex gap-x-2 text-foreground-inverse/70 hover:text-foreground-inverse focus:outline-hidden focus:text-foreground-inverse" href="#">About us</a></p>
+          <p><a class="inline-flex gap-x-2 text-foreground-inverse/70 hover:text-foreground-inverse focus:outline-hidden focus:text-foreground-inverse" href="#">Blog</a></p>
+          <p><a class="inline-flex gap-x-2 text-foreground-inverse/70 hover:text-foreground-inverse focus:outline-hidden focus:text-foreground-inverse" href="#">Careers</a> <span class="inline-block ms-1 text-xs bg-primary text-primary-foreground py-1 px-2 rounded-lg">We're hiring</span></p>
+          <p><a class="inline-flex gap-x-2 text-foreground-inverse/70 hover:text-foreground-inverse focus:outline-hidden focus:text-foreground-inverse" href="#">Customers</a></p>
+        </div>
+      </div>
+      <!-- End Col -->
+
+      <div class="col-span-2">
+        <h4 class="font-semibold text-foreground-inverse">Stay up to date</h4>
+
+        <form>
+          <div class="mt-4 flex flex-col items-center gap-2 sm:flex-row sm:gap-3 bg-layer rounded-lg p-2">
+            <div class="w-full">
+              <label for="hero-input" class="sr-only">Subscribe</label>
+              <input type="text" id="hero-input" name="hero-input" class="py-2.5 sm:py-3 px-4 block w-full bg-transparent border-transparent rounded-lg sm:text-sm text-foreground placeholder:text-muted-foreground-1 focus:border-primary-focus focus:ring-primary-focus disabled:opacity-50 disabled:pointer-events-none" placeholder="Enter your email">
+            </div>
+            <a class="w-full sm:w-auto whitespace-nowrap p-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg bg-primary border border-primary-line text-primary-foreground hover:bg-primary-hover focus:outline-hidden focus:bg-primary-focus disabled:opacity-50 disabled:pointer-events-none" href="#">
+              Subscribe
+            </a>
+          </div>
+          <p class="mt-3 text-sm text-muted-foreground">
+            New UI kits or big discounts. Never spam.
+          </p>
+        </form>
+      </div>
+      <!-- End Col -->
+    </div>
+    <!-- End Grid -->
+
+    <div class="mt-5 sm:mt-12 grid gap-y-2 sm:gap-y-0 sm:flex sm:justify-between sm:items-center">
+      <div class="flex flex-wrap justify-between items-center gap-2">
+        <p class="text-sm text-muted-foreground">
+          © 2026 Preline Labs.
+        </p>
+      </div>
+      <!-- End Col -->
+
+      <!-- Social Brands -->
+      <div>
+        <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-foreground-inverse hover:bg-plain/10 focus:outline-hidden focus:bg-plain/10 disabled:opacity-50 disabled:pointer-events-none" href="#">
+          <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+          </svg>
+        </a>
+        <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-foreground-inverse hover:bg-plain/10 focus:outline-hidden focus:bg-plain/10 disabled:opacity-50 disabled:pointer-events-none" href="#">
+          <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+          </svg>
+        </a>
+        <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-foreground-inverse hover:bg-plain/10 focus:outline-hidden focus:bg-plain/10 disabled:opacity-50 disabled:pointer-events-none" href="#">
+          <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+          </svg>
+        </a>
+        <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-foreground-inverse hover:bg-plain/10 focus:outline-hidden focus:bg-plain/10 disabled:opacity-50 disabled:pointer-events-none" href="#">
+          <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
+        </a>
+        <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-foreground-inverse hover:bg-plain/10 focus:outline-hidden focus:bg-plain/10 disabled:opacity-50 disabled:pointer-events-none" href="#">
+          <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M3.362 10.11c0 .926-.756 1.681-1.681 1.681S0 11.036 0 10.111C0 9.186.756 8.43 1.68 8.43h1.682v1.68zm.846 0c0-.924.756-1.68 1.681-1.68s1.681.756 1.681 1.68v4.21c0 .924-.756 1.68-1.68 1.68a1.685 1.685 0 0 1-1.682-1.68v-4.21zM5.89 3.362c-.926 0-1.682-.756-1.682-1.681S4.964 0 5.89 0s1.68.756 1.68 1.68v1.682H5.89zm0 .846c.924 0 1.68.756 1.68 1.681S6.814 7.57 5.89 7.57H1.68C.757 7.57 0 6.814 0 5.89c0-.926.756-1.682 1.68-1.682h4.21zm6.749 1.682c0-.926.755-1.682 1.68-1.682.925 0 1.681.756 1.681 1.681s-.756 1.681-1.68 1.681h-1.681V5.89zm-.848 0c0 .924-.755 1.68-1.68 1.68A1.685 1.685 0 0 1 8.43 5.89V1.68C8.43.757 9.186 0 10.11 0c.926 0 1.681.756 1.681 1.68v4.21zm-1.681 6.748c.926 0 1.682.756 1.682 1.681S11.036 16 10.11 16s-1.681-.756-1.681-1.68v-1.682h1.68zm0-.847c-.924 0-1.68-.755-1.68-1.68 0-.925.756-1.681 1.68-1.681h4.21c.924 0 1.68.756 1.68 1.68 0 .926-.756 1.681-1.68 1.681h-4.21z"/>
+          </svg>
+        </a>
+      </div>
+      <!-- End Social Brands -->
+    </div>
+  </div>
+</footer>
+<!-- ========== END FOOTER ========== -->
+
+
+
+
+<script src="./node_modules/preline/dist/preline.js"></script>
+</body>
+</html>
